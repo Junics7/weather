@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +13,25 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
             color: #fff;
             min-height: 100vh;
             padding: 16px;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         header {
             text-align: center;
             padding: 30px 0;
             margin-bottom: 30px;
         }
-        
+
         h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
@@ -39,21 +40,21 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .cities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
-        
+
         .city-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -63,12 +64,12 @@
             transition: transform 0.3s ease;
             position: relative;
         }
-        
+
         .city-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
-        
+
         .city-card::before {
             content: '';
             position: absolute;
@@ -78,34 +79,34 @@
             height: 5px;
             background: linear-gradient(to right, #ff9a9e, #fad0c4);
         }
-        
+
         .city-image {
             height: 250px;
             overflow: hidden;
         }
-        
+
         .city-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .city-card:hover .city-image img {
             transform: scale(1.05);
         }
-        
+
         .city-info {
             padding: 25px;
         }
-        
+
         .city-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .city-name {
             font-size: 1.8rem;
             font-weight: 600;
@@ -113,10 +114,11 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         /* Стиль для флага в названии города */
         .city-flag {
-            width: 1em; /* Размер как у шрифта */
+            width: 1em;
+            /* Размер как у шрифта */
             height: 0.75em;
             border-radius: 2px;
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -124,12 +126,12 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             vertical-align: middle;
         }
-        
+
         .city-links {
             display: flex;
             gap: 15px;
         }
-        
+
         .city-link {
             color: #fff;
             background: rgba(255, 255, 255, 0.2);
@@ -142,12 +144,12 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .city-link:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.1);
         }
-        
+
         .weather-info {
             display: flex;
             align-items: center;
@@ -155,7 +157,7 @@
             margin-bottom: 25px;
             flex-wrap: wrap;
         }
-        
+
         .weather-icon {
             font-size: 3rem;
             width: 70px;
@@ -164,26 +166,26 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .temp {
             font-size: 2.8rem;
             font-weight: 700;
         }
-        
+
         .weather-details {
             display: flex;
             flex-direction: column;
             gap: 5px;
             font-size: 0.95rem;
         }
-        
+
         .clock-container {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 20px;
             padding: 20px;
             text-align: center;
         }
-        
+
         .clock-label {
             font-size: 1.1rem;
             margin-bottom: 15px;
@@ -194,14 +196,14 @@
             gap: 8px;
             flex-wrap: wrap;
         }
-        
+
         .timezone {
             font-size: 0.85rem;
             background: rgba(255, 255, 255, 0.2);
             padding: 3px 8px;
             border-radius: 10px;
         }
-        
+
         .digital-clock {
             background: #fff;
             border-radius: 50px;
@@ -212,7 +214,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .digital-clock::before {
             content: '';
             position: absolute;
@@ -220,10 +222,10 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, transparent, rgba(255,255,255,0.2) 70%);
+            background: radial-gradient(circle, transparent, rgba(255, 255, 255, 0.2) 70%);
             z-index: 0;
         }
-        
+
         .time {
             font-size: 2.8rem;
             font-weight: 700;
@@ -233,47 +235,48 @@
             font-family: 'Courier New', monospace;
             letter-spacing: 3px;
         }
-        
+
         .date {
             font-size: 1.0rem;
             color: #333;
             position: relative;
             z-index: 1;
         }
-        
+
         .footer {
             text-align: center;
             padding: 30px 0;
             font-size: 1rem;
             opacity: 0.8;
         }
-        
+
         @media (max-width: 768px) {
             .cities-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
                 font-size: 2.2rem;
             }
-            
+
             .time {
                 font-size: 2.5rem;
             }
-            
+
             .temp {
                 font-size: 2.5rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1><i class="fas fa-globe-americas"></i> Мировое время и погода</h1>
             <p class="subtitle">Актуальная информация о дате, времени и погоде в городах мира</p>
         </header>
-        
+
         <div class="cities-grid">
             <!-- Подольск -->
             <div class="city-card">
@@ -287,15 +290,17 @@
                             Подольск
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@55.430898,37.492185,12z/data=!3m1!4b1!4m6!3m5!1s0x46b54b2a602d97d7:0x5f0570d5d0e7c4a0!8m2!3d55.4241819!4d37.5547182!16zL20vMDN4cG5r?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@55.430898,37.492185,12z/data=!3m1!4b1!4m6!3m5!1s0x46b54b2a602d97d7:0x5f0570d5d0e7c4a0!8m2!3d55.4241819!4d37.5547182!16zL20vMDN4cG5r?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-sun"></i>
@@ -307,7 +312,7 @@
                             <div>Ветер: 3 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -320,11 +325,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Малый Маяк -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://avatars.mds.yandex.net/i?id=fb5ba3a41fb49da29fdf7a28c49c05a8_l-7750971-images-thumbs&n=13" alt="Малый Маяк">
+                    <img src="https://avatars.mds.yandex.net/i?id=fb5ba3a41fb49da29fdf7a28c49c05a8_l-7750971-images-thumbs&n=13"
+                        alt="Малый Маяк">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -333,15 +339,17 @@
                             Малый Маяк
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9+%D0%9C%D0%B0%D1%8F%D0%BA/@44.611804,34.363806,16z/data=!3m1!4b1!4m6!3m5!1s0x4094d8d8d2a2a1a3:0x6f3c1a9b8a7c1d0f!8m2!3d44.611804!4d34.368381!16s%2Fg%2F1tgbf9t0?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9+%D0%9C%D0%B0%D1%8F%D0%BA/@44.611804,34.363806,16z/data=!3m1!4b1!4m6!3m5!1s0x4094d8d8d2a2a1a3:0x6f3c1a9b8a7c1d0f!8m2!3d44.611804!4d34.368381!16s%2Fg%2F1tgbf9t0?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%9C%D0%B0%D1%8F%D0%BA" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%9C%D0%B0%D1%8F%D0%BA"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-cloud-sun"></i>
@@ -353,7 +361,7 @@
                             <div>Ветер: 2 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -366,11 +374,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Азово -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://avatars.mds.yandex.net/i?id=3f4a7c60bcb22ee0c8e0d37b8c97c144_l-5013948-images-thumbs&n=13" alt="Азово">
+                    <img src="https://avatars.mds.yandex.net/i?id=3f4a7c60bcb22ee0c8e0d37b8c97c144_l-5013948-images-thumbs&n=13"
+                        alt="Азово">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -379,15 +388,17 @@
                             Азово
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%90%D0%B7%D0%BE%D0%B2%D0%BE,+%D0%9E%D0%BC%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+646880/@54.704615,71.269118,16z/data=!3m1!4b1!4m6!3m5!1s0x42e5a5c2c6d5e5e7:0x6d1c1c2c3d5e5e7!8m2!3d54.704615!4d71.273693!16s%2Fg%2F1tds0s4_?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%90%D0%B7%D0%BE%D0%B2%D0%BE,+%D0%9E%D0%BC%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+646880/@54.704615,71.269118,16z/data=!3m1!4b1!4m6!3m5!1s0x42e5a5c2c6d5e5e7:0x6d1c1c2c3d5e5e7!8m2!3d54.704615!4d71.273693!16s%2Fg%2F1tds0s4_?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%BE%D0%B2%D0%BE_(%D0%9E%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%BE%D0%B2%D0%BE_(%D0%9E%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-cloud"></i>
@@ -399,7 +410,7 @@
                             <div>Ветер: 4 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -412,11 +423,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Пхукет -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://www.bgoperator.ru/pr_img/1000512/20221221/30803636/Depositphotos_507213600_xl-2015.jpg" alt="Пхукет">
+                    <img src="https://www.bgoperator.ru/pr_img/1000512/20221221/30803636/Depositphotos_507213600_xl-2015.jpg"
+                        alt="Пхукет">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -425,15 +437,17 @@
                             Пхукет
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%9F%D1%85%D1%83%D0%BA%D0%B5%D1%82,+%D0%A2%D0%B0%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4/@7.9519381,98.338089,12z/data=!3m1!4b1!4m6!3m5!1s0x305031d00d0991a9:0x48c7d0e25d0a0b7c!8m2!3d7.880448!4d98.3922503!16zL20vMDN5d3B6?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%9F%D1%85%D1%83%D0%BA%D0%B5%D1%82,+%D0%A2%D0%B0%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4/@7.9519381,98.338089,12z/data=!3m1!4b1!4m6!3m5!1s0x305031d00d0991a9:0x48c7d0e25d0a0b7c!8m2!3d7.880448!4d98.3922503!16zL20vMDN5d3B6?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%85%D1%83%D0%BA%D0%B5%D1%82_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%85%D1%83%D0%BA%D0%B5%D1%82_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-sun"></i>
@@ -445,7 +459,7 @@
                             <div>Ветер: 5 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -458,11 +472,61 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Остров Панган -->
+            <div class="city-card">
+                <div class="city-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=1b7ceebe18bd6ee5f7ca06521db64b5a_l-12520451-images-thumbs&n=13"
+                        alt="Остров Панган">
+                </div>
+                <div class="city-info">
+                    <div class="city-header">
+                        <h2 class="city-name">
+                            <img src="https://flagcdn.com/th.svg" class="city-flag" alt="Флаг Таиланда" title="Таиланд">
+                            Панган
+                        </h2>
+                        <div class="city-links">
+                            <a href="https://www.google.com/maps/place/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2+%D0%9F%D0%B0%D0%BD%D0%B3%D0%B0%D0%BD,+%D0%A2%D0%B0%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4/@9.5974783,100.043746,12z/data=!3m1!4b1!4m6!3m5!1s0x30501ea05c3618b5:0x64ed62583543850!8m2!3d9.5974783!4d100.116246!16zL20vMGszbG1m?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                            <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BD%D0%B3%D0%B0%D0%BD"
+                                class="city-link" target="_blank" title="Википедия">
+                                <i class="fab fa-wikipedia-w"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="weather-info">
+                        <div class="weather-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="temp">31°C</div>
+                        <div class="weather-details">
+                            <div>Облачность: 15%</div>
+                            <div>Влажность: 78%</div>
+                            <div>Ветер: 4 м/с</div>
+                        </div>
+                    </div>
+
+                    <div class="clock-container">
+                        <div class="clock-label">
+                            <i class="fas fa-clock"></i> Местное время
+                            <span class="timezone">ICT (UTC+7)</span>
+                        </div>
+                        <div class="digital-clock">
+                            <div class="time">00:00:00</div>
+                            <div class="date">1 января 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Нячанг -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/4414226/pub_621ddde10020f93992161896_621ddee3c7802f0e72d565f2/scale_1200" alt="Нячанг">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/4414226/pub_621ddde10020f93992161896_621ddee3c7802f0e72d565f2/scale_1200"
+                        alt="Нячанг">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -471,15 +535,17 @@
                             Нячанг
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%9D%D1%8F%D1%87%D0%B0%D0%BD%D0%B3,+%D0%9A%D1%85%D0%B0%D0%BD%D1%8C%D1%85%D0%BE%D0%B0,+%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC/@12.2387911,109.1421909,12z/data=!3m1!4b1!4m6!3m5!1s0x3170677811cc886f:0x5c4bbc0aa81edcb9!8m2!3d12.2387911!4d109.1967488!16zL20vMDVgbXc4?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%9D%D1%8F%D1%87%D0%B0%D0%BD%D0%B3,+%D0%9A%D1%85%D0%B0%D0%BD%D1%8C%D1%85%D0%BE%D0%B0,+%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC/@12.2387911,109.1421909,12z/data=!3m1!4b1!4m6!3m5!1s0x3170677811cc886f:0x5c4bbc0aa81edcb9!8m2!3d12.2387911!4d109.1967488!16zL20vMDVgbXc4?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%8F%D1%87%D0%B0%D0%BD%D0%B3" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%8F%D1%87%D0%B0%D0%BD%D0%B3"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-cloud-sun"></i>
@@ -491,7 +557,7 @@
                             <div>Ветер: 4 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -504,11 +570,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Анталья -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://i.pinimg.com/originals/40/47/d5/4047d5f1ef503dfe73d3bc8a4b06f66b.jpg" alt="Анталья">
+                    <img src="https://i.pinimg.com/originals/40/47/d5/4047d5f1ef503dfe73d3bc8a4b06f66b.jpg"
+                        alt="Анталья">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -517,15 +584,17 @@
                             Анталья
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%90%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D1%8F,+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/@36.8841402,30.6526023,12z/data=!3m1!4b1!4m6!3m5!1s0x14c39aa1d5f5e0e5:0x3a9b3c1d5a0a3b0c!8m2!3d36.8841402!4d30.705652!16zL20vMDJ0N3F3?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%90%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D1%8F,+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/@36.8841402,30.6526023,12z/data=!3m1!4b1!4m6!3m5!1s0x14c39aa1d5f5e0e5:0x3a9b3c1d5a0a3b0c!8m2!3d36.8841402!4d30.705652!16zL20vMDJ0N3F3?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D1%8F" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D1%8F"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-sun"></i>
@@ -537,7 +606,7 @@
                             <div>Ветер: 3 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -550,28 +619,32 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Астана -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://www.gov.kz/uploads/2024/4/25/90db76a2d3021ad90b4cbb34b9644e48_original.262571.jpeg" alt="Астана">
+                    <img src="https://www.gov.kz/uploads/2024/4/25/90db76a2d3021ad90b4cbb34b9644e48_original.262571.jpeg"
+                        alt="Астана">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
                         <h2 class="city-name">
-                            <img src="https://flagcdn.com/kz.svg" class="city-flag" alt="Флаг Казахстана" title="Казахстан">
+                            <img src="https://flagcdn.com/kz.svg" class="city-flag" alt="Флаг Казахстана"
+                                title="Казахстан">
                             Астана
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,+%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD/@51.128207,71.430474,12z/data=!3m1!4b1!4m6!3m5!1s0x424580c47db54609:0x97f9148dddb19228!8m2!3d51.128207!4d71.430474!16zL20vMGJqYzM?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0,+%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD/@51.128207,71.430474,12z/data=!3m1!4b1!4m6!3m5!1s0x424580c47db54609:0x97f9148dddb19228!8m2!3d51.128207!4d71.430474!16zL20vMGJqYzM?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-cloud"></i>
@@ -583,7 +656,7 @@
                             <div>Ветер: 5 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -596,11 +669,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Шарм-эль-Шейх -->
             <div class="city-card">
                 <div class="city-image">
-                    <img src="https://cdnp.flypgs.com/files/Sehirler-long-tail/SarmElSeyh/sarm-el-seyh-ne-zaman.jpg" alt="Шарм-эль-Шейх">
+                    <img src="https://cdnp.flypgs.com/files/Sehirler-long-tail/SarmElSeyh/sarm-el-seyh-ne-zaman.jpg"
+                        alt="Шарм-эль-Шейх">
                 </div>
                 <div class="city-info">
                     <div class="city-header">
@@ -609,15 +683,17 @@
                             Шарм-эль-Шейх
                         </h2>
                         <div class="city-links">
-                            <a href="https://www.google.com/maps/place/%D0%A8%D0%B0%D1%80%D0%BC-%D1%8D%D0%BB%D1%8C-%D0%A8%D0%B5%D0%B9%D1%85,+%D0%95%D0%B3%D0%B8%D0%BF%D0%B5%D1%82/@27.91582,34.330019,12z/data=!3m1!4b1!4m6!3m5!1s0x1453382d9b9f190b:0x4d5e3ccd8b6b3f2f!8m2!3d27.91582!4d34.330019!16zL20vMDZ0dDc?entry=ttu" class="city-link" target="_blank" title="Карта">
+                            <a href="https://www.google.com/maps/place/%D0%A8%D0%B0%D1%80%D0%BC-%D1%8D%D0%BB%D1%8C-%D0%A8%D0%B5%D0%B9%D1%85,+%D0%95%D0%B3%D0%B8%D0%BF%D0%B5%D1%82/@27.91582,34.330019,12z/data=!3m1!4b1!4m6!3m5!1s0x1453382d9b9f190b:0x4d5e3ccd8b6b3f2f!8m2!3d27.91582!4d34.330019!16zL20vMDZ0dDc?entry=ttu"
+                                class="city-link" target="_blank" title="Карта">
                                 <i class="fas fa-map-marker-alt"></i>
                             </a>
-                            <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%80%D0%BC-%D1%8D%D0%BB%D1%8C-%D0%A8%D0%B5%D0%B9%D1%85" class="city-link" target="_blank" title="Википедия">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%80%D0%BC-%D1%8D%D0%BB%D1%8C-%D0%A8%D0%B5%D0%B9%D1%85"
+                                class="city-link" target="_blank" title="Википедия">
                                 <i class="fab fa-wikipedia-w"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="weather-info">
                         <div class="weather-icon">
                             <i class="fas fa-sun"></i>
@@ -629,7 +705,7 @@
                             <div>Ветер: 3 м/с</div>
                         </div>
                     </div>
-                    
+
                     <div class="clock-container">
                         <div class="clock-label">
                             <i class="fas fa-clock"></i> Местное время
@@ -643,7 +719,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer">
             <p>Данные о погоде предоставлены OpenWeatherMap • Актуальная дата и время</p>
         </div>
@@ -652,7 +728,7 @@
     <script>
         // API ключ для OpenWeatherMap
         const API_KEY = '7362260e6a0b80bdbc3b5d2149173502';
-        
+
         // Данные о городах с часовыми поясами
         const cities = [
             {
@@ -704,9 +780,9 @@
                 details: document.querySelector('.city-card:nth-child(4) .weather-details')
             },
             {
-                name: 'Нячанг',
-                lat: 12.2388,
-                lon: 109.1967,
+                name: 'Панган',
+                lat: 9.5879,
+                lon: 100.0458,
                 timeOffset: 7, // UTC+7
                 timezone: 'ICT (UTC+7)',
                 timeElement: document.querySelector('.city-card:nth-child(5) .time'),
@@ -714,6 +790,18 @@
                 tempElement: document.querySelector('.city-card:nth-child(5) .temp'),
                 weatherIcon: document.querySelector('.city-card:nth-child(5) .weather-icon i'),
                 details: document.querySelector('.city-card:nth-child(5) .weather-details')
+            },
+            {
+                name: 'Нячанг',
+                lat: 12.2388,
+                lon: 109.1967,
+                timeOffset: 7, // UTC+7
+                timezone: 'ICT (UTC+7)',
+                timeElement: document.querySelector('.city-card:nth-child(6) .time'),
+                dateElement: document.querySelector('.city-card:nth-child(6) .date'),
+                tempElement: document.querySelector('.city-card:nth-child(6) .temp'),
+                weatherIcon: document.querySelector('.city-card:nth-child(6) .weather-icon i'),
+                details: document.querySelector('.city-card:nth-child(6) .weather-details')
             },
             {
                 name: 'Анталья',
@@ -752,34 +840,34 @@
                 details: document.querySelector('.city-card:nth-child(8) .weather-details')
             }
         ];
-        
+
         // Обновление времени для всех городов с учетом часовых поясов
         function updateTime() {
             const now = new Date();
             const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-            
+
             cities.forEach(city => {
                 const cityTime = new Date(utc + (city.timeOffset * 3600000));
-                
+
                 // Форматирование времени
                 const hours = String(cityTime.getHours()).padStart(2, '0');
                 const minutes = String(cityTime.getMinutes()).padStart(2, '0');
                 const seconds = String(cityTime.getSeconds()).padStart(2, '0');
-                
+
                 // Форматирование даты
-                const options = { 
-                    year: 'numeric', 
-                    month: 'long', 
+                const options = {
+                    year: 'numeric',
+                    month: 'long',
                     day: 'numeric',
                     weekday: 'long'
                 };
                 const dateString = cityTime.toLocaleDateString('ru-RU', options);
-                
+
                 city.timeElement.textContent = `${hours}:${minutes}:${seconds}`;
                 city.dateElement.textContent = dateString;
             });
         }
-        
+
         // Получение данных о погоде
         async function getWeather() {
             for (const city of cities) {
@@ -787,16 +875,16 @@
                     const response = await fetch(
                         `https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=${API_KEY}&units=metric&lang=ru`
                     );
-                    
+
                     if (!response.ok) {
                         throw new Error('Ошибка получения данных о погоде');
                     }
-                    
+
                     const data = await response.json();
-                    
+
                     // Обновление информации о погоде
                     city.tempElement.textContent = `${Math.round(data.main.temp)}°C`;
-                    
+
                     // Выбор иконки в зависимости от погоды
                     const weatherCode = data.weather[0].id;
                     if (weatherCode >= 200 && weatherCode < 300) {
@@ -812,14 +900,14 @@
                     } else {
                         city.weatherIcon.className = 'fas fa-cloud';
                     }
-                    
+
                     // Обновление деталей погоды
                     city.details.innerHTML = `
                         <div>${capitalizeFirstLetter(data.weather[0].description)}</div>
                         <div>Влажность: ${data.main.humidity}%</div>
                         <div>Ветер: ${Math.round(data.wind.speed)} м/с</div>
                     `;
-                    
+
                 } catch (error) {
                     console.error(`Ошибка при получении погоды для ${city.name}:`, error);
                     city.tempElement.textContent = 'Н/Д';
@@ -827,24 +915,25 @@
                 }
             }
         }
-        
+
         // Вспомогательная функция для заглавной буквы
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
-        
+
         // Инициализация
         document.addEventListener('DOMContentLoaded', () => {
             // Обновление времени каждую секунду
             updateTime();
             setInterval(updateTime, 1000);
-            
+
             // Получение погоды
             getWeather();
-            
+
             // Обновление погоды каждые 10 минут
             setInterval(getWeather, 600000);
         });
     </script>
 </body>
+
 </html>
